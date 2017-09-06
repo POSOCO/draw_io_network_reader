@@ -62,7 +62,7 @@ fs.readFile(filename, 'utf8', function (err, data) {
             var nodeStyleStrings = nodeMxCell.getAttribute("style").split(";");
             var nodeStyles = [];
             for (var k = 0; k < nodeStyleStrings.length; k++) {
-                nodeStyles[nodeStyleStrings[k].split("=")[0]] = elementStyleStrings[k].split("=")[1];
+                nodeStyles[nodeStyleStrings[k].split("=")[0]] = nodeStyleStrings[k].split("=")[1];
             }
             //find if the element styles have an attribute called 'ellipse'
             if (Object.keys(nodeStyles).indexOf("ellipse") != -1) {
